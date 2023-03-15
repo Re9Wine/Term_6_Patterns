@@ -1,18 +1,13 @@
 package org.example;
 
-import org.example.Comparators.Patient.PatientDiagnosisComparator;
-import org.example.Comparators.Patient.PatientPhoneNumberComparator;
-import org.example.Entity.Patient;
-import org.example.Views.PatientView;
-
-import java.util.Comparator;
+import org.example.View.PatientView;
 
 public class Main {
     public static void main(String[] args) {
         try{
-            PatientView view = new PatientView();
+            PatientView.execute();
 
-            view.execute();
+            System.out.println("Пока)");
         }
         catch (Exception e){
             System.out.println(e.getMessage());

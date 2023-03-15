@@ -1,4 +1,4 @@
-package org.example.Entity;
+package org.example.Bean;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,17 +13,12 @@ public class Patient implements Serializable, Comparable<Patient> {
     private int medCardNumber;
     private String diagnosis;
 
-    public Patient(){
-        firstName = "нету";
-        secondName = "нету";
-        thirdName = "нету";
-        address = "нету";
-        diagnosis = "нету";
-    }
+    public Patient(){}
 
-    public Patient(int id, String firstName, String secondName, String thirdName, String address,
-                   int phoneNumber, int medCardNumber, String diagnosis){
-        this.id =id;
+    public Patient(int id, String firstName, String secondName, String thirdName, String address, int phoneNumber,
+                   int medCardNumber, String diagnosis)
+    {
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.thirdName = thirdName;
@@ -41,13 +36,14 @@ public class Patient implements Serializable, Comparable<Patient> {
         this.id = id;
     }
 
-    public String getFirstName(){
-        return  firstName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstName(String firstName){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public String getSecondName() {
         return secondName;
     }
@@ -120,8 +116,8 @@ public class Patient implements Serializable, Comparable<Patient> {
                 && firstName.equals(patient.firstName)
                 && secondName.equals(patient.secondName)
                 && thirdName.equals(patient.thirdName)
-                && Objects.equals(address, patient.address)
-                && Objects.equals(diagnosis, patient.diagnosis);
+                && address.equals(patient.address)
+                && diagnosis.equals(patient.diagnosis);
     }
 
     @Override

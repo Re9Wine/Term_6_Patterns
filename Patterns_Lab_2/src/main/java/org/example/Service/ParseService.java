@@ -1,6 +1,6 @@
-package org.example.Helpers;
+package org.example.Service;
 
-public class ParseHelper {
+public class ParseService {
     public static int tryParseInt(String text) throws NumberFormatException{
         try{
             return Integer.parseInt(text);

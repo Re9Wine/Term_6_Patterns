@@ -1,40 +1,30 @@
-package org.example.Controllers;
+package org.example.Controller;
 
-import org.example.Entity.Patient;
-import org.example.Helpers.FileHelper;
-import org.example.Helpers.JsonHelper;
+import org.example.Bean.Patient;
+import org.example.Service.FileService;
+import org.example.Service.JsonService;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class PatientController {
-    public List<Patient> filterPatientsByMedCardNumber(List<Patient> patients, int minCardNumber, int maxCardNumber){
-        return patients.stream().filter(x -> x.getMedCardNumber() >= minCardNumber && x.getMedCardNumber() <= maxCardNumber).toList();
+    private static final String PATIENT_FILEPATH = "D:\\Study\\Term 6\\Паттерны\\Labs\\Term_6_Patterns\\Patterns_Lab_2\\src\\main\\resources\\Patients.json";
+
+    public static List<Patient> filterByDiagnosis(List<Patient> patients, String diagnosis){
+        return patients.stream().filter(x -> x.getDiagnosis() == diagnosis).toList();
     }
 
-    public List<Patient> filterPatientsByDiagnosis(List<Patient> patients, String diagnosis){
-        return patients.stream().filter(x -> x.getDiagnosis().equals(diagnosis)).toList();
+    public static List<Patient> filterByMedCardRange(List<Patient> patients, int minMedCardNumber, int maxMedCardNumber){
+        return patients.stream().filter(x -> x.getMedCardNumber() >= minMedCardNumber
+        && x.getMedCardNumber() <= maxMedCardNumber).toList();
     }
 
-    public List<Patient> getPatientsFromJson(String filePath) throws IOException {
-        return JsonHelper.DeserializeList(FileHelper.readFile(filePath), Patient.class);
+    public static List<Patient> getPatientsFromJsonFile() throws IOException {
+        return JsonService.DeserializeList(FileService.readFile(PATIENT_FILEPATH), Patient.class);
     }
 
-    public void writePatientsToJsonFile(List<Patient> patients, String filePath) throws IOException {
-        FileHelper.writeFile(filePath, JsonHelper.Serialize(patients));
-    }
-
-    public void sortPatients(List<Patient> patients){
-        patients.sort(null);
-    }
-
-    public void sortPatients(List<Patient> patients, Comparator<Patient> comparator){
-        patients.sort(comparator);
-    }
-
-    public List<Patient> setDefaultPatients(){
+    public static List<Patient> setDefaultPatients(){
         List<Patient> patients = new ArrayList<>();
 
         patients.add(new Patient());
