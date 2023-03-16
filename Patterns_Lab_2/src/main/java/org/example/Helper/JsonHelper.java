@@ -1,4 +1,4 @@
-package org.example.Service;
+package org.example.Helper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonService {
+public class JsonHelper {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static <T> T Deserialize(String data, Class<T> tClass) throws JsonProcessingException {

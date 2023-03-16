@@ -1,11 +1,11 @@
-package org.example.Service;
+package org.example.Helper;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FileService {
+public class FileHelper {
     public static String readFile(String filePath) throws IOException {
         try {
             FileReader fileReader = new FileReader(filePath);

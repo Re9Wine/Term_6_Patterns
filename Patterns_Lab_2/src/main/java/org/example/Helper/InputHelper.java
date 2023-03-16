@@ -1,4 +1,4 @@
-package org.example.Service;
+package org.example.Helper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 import static java.lang.System.in;
 
-public class InputService {
+public class InputHelper {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
     public static String readTextFromKeyboard() throws IOException {
