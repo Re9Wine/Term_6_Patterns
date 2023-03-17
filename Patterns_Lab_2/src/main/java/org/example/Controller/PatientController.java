@@ -1,5 +1,6 @@
 package org.example.Controller;
 
+import org.example.Bean.User;
 import org.example.Helper.InputHelper;
 import org.example.Helper.ParseHelper;
 import org.example.Service.PatientService;
