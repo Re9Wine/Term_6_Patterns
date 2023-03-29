@@ -5,29 +5,35 @@ import org.example.Controller.UserController;
 import org.example.Repository.PatientRepository;
 import org.example.Service.PatientService;
 import org.example.Service.UserService;
+import org.example.View.MessageView;
 
 public class Browser {
     public void launch() {
-            boolean isRun = true;
-            var patientRepository = new PatientRepository();
-            var patientService = new PatientService(patientRepository);
-            var patientController = new PatientController(patientService);
+        boolean isRun = true;
+        var patientRepository = new PatientRepository();
+        var patientService = new PatientService(patientRepository);
+        var patientController = new PatientController(patientService);
 
-            var userService = new UserService();
-            var userController = new UserController(userService);
+        var userService = new UserService();
+        var userController = new UserController(userService);
 
-            while (isRun){
-                try{
-//                    patientController.patientMenu();
+        var commands = Invoker.getInstance(patientController, userController).getCommands();
 
-//                    isRun = patientController.selectMenuItem();
+        while (isRun){
+            try{
+                commands.get("printPatientMenu").execute();
 
-                    userController.mainMenu();
+                isRun = commands.get("selectPatientMenuItem").execute();
 
-                    isRun = userController.selectMenuItem();
-                } catch (Exception e){
-                    patientController.error(e.getMessage());
-                }
+            } catch (Exception e){
+                printErrorMessage(e.getMessage());
             }
+        }
+
+        System.out.println("Пока)");
+    }
+
+    private void printErrorMessage(String message){
+        MessageView.printMessage(message);
     }
 }

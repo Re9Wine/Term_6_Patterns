@@ -1,6 +1,5 @@
 package org.example.Controller;
 
-import org.example.Bean.User;
 import org.example.Helper.InputHelper;
 import org.example.Service.UserService;
 import org.example.View.MainMenuView;

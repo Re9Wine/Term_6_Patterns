@@ -1,6 +1,5 @@
 package org.example.Controller;
 
-import org.example.Bean.User;
 import org.example.Helper.InputHelper;
 import org.example.Helper.ParseHelper;
 import org.example.Service.PatientService;
@@ -64,9 +63,5 @@ public class PatientController {
         var patients = service.filterByMedCardRange(minMedCardNumber, maxMedCardNumber);
 
         ListView.printList(patients);
-    }
-
-    public void error(String errorMessage){
-        MessageView.printMessage(errorMessage);
     }
 }
