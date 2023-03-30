@@ -5,4 +5,9 @@ public class CocaCola implements IDrink{
     public void beDrunk() {
         System.out.println("You drink coca-cola");
     }
+
+    @Override
+    public String getName() {
+        return "Coca-Cola";
+    }
 }

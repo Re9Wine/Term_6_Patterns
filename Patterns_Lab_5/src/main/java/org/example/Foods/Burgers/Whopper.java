@@ -5,4 +5,9 @@ public class Whopper implements IBurger{
     public void beEaten() {
         System.out.println("You eat whopper");
     }
+
+    @Override
+    public String getName() {
+        return "Whopper";
+    }
 }

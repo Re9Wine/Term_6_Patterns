@@ -5,4 +5,9 @@ public class Sprite implements IDrink{
     public void beDrunk() {
         System.out.println("You drink sprite");
     }
+
+    @Override
+    public String getName() {
+        return "Sprite";
+    }
 }

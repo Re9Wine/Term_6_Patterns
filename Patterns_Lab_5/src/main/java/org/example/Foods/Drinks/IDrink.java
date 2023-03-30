@@ -1,5 +1,7 @@
 package org.example.Foods.Drinks;
 
-public interface IDrink {
+import org.example.Foods.IFood;
+
+public interface IDrink extends IFood {
     void beDrunk();
 }

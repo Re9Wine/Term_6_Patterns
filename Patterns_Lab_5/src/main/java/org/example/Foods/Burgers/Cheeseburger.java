@@ -5,4 +5,9 @@ public class Cheeseburger implements IBurger{
     public void beEaten() {
         System.out.println("You eat cheeseburger");
     }
+
+    @Override
+    public String getName() {
+        return "Cheeseburger";
+    }
 }
