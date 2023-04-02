@@ -1,5 +1,6 @@
 package org.example.Foods.Drinks;
 
+// одна из реализаций продукта напиток
 public class CocaCola implements IDrink{
     @Override
     public void beDrunk() {

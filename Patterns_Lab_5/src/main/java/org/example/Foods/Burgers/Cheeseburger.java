@@ -1,5 +1,6 @@
 package org.example.Foods.Burgers;
 
+// одна из реализаций бургера
 public class Cheeseburger implements IBurger{
     @Override
     public void beEaten() {

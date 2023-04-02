@@ -4,7 +4,9 @@ import org.example.FastFoodStores.BurgerKing;
 import org.example.FastFoodStores.IFastFoodStore;
 import org.example.FastFoodStores.TastyAndPoint;
 
+// класс клиента - служит для выбора заведения (фабрики)
 public class FastFoodStoreClient {
+    // метод выбора заведения (фабрики)
     public IFastFoodStore selectFastFoodStore(int fastFoodStore) throws Exception {
         switch (fastFoodStore){
             case 1 -> {

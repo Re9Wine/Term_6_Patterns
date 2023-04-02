@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// одна из реализация фабрики
 public class BurgerKing implements IFastFoodStore{
     @Override
     public IBurger sellBurger() {

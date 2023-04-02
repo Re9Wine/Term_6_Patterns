@@ -6,9 +6,11 @@ import java.io.InputStreamReader;
 
 import static java.lang.System.in;
 
+// класс ввода значений
 public class InputHelper {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
+    // метод ввода данных с клавиатуры
     public static String readTextFromKeyboard() throws IOException {
         try{
             return reader.readLine();
