@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда выбора пункта главного меню
 public class SelectUserMenuItemCommand implements ICommand {
     private final UserController userController;
 

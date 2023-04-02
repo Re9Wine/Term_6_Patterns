@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда регистрации
 public class RegistrationCommand implements ICommand {
     private final UserController userController;
 

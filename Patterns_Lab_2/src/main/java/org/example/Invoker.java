@@ -7,10 +7,15 @@ import org.example.Interface.ICommand;
 
 import java.util.HashMap;
 
+// класс "вызывальщик" - вызывает команды. Реализован как класс-синглтон
 public class Invoker {
+    // возвращаемый Invoker из метода getInstance
     private static Invoker instance;
+
+    // список комманд
     private final HashMap<String, ICommand> commands;
 
+    // приватный конструктор. Инициализирует все возможные команды
     private Invoker(PatientController patientController, UserController userController) {
         commands = new HashMap<>();
 
@@ -26,6 +31,7 @@ public class Invoker {
         commands.put("printPatientsInMedCardRange", new PrintPatientsInMedCardRange(patientController));
     }
 
+    // геттер (в синглоне это можно расценивать как публиный конструктор) для получения объекта User
     public static Invoker getInstance(PatientController patientController, UserController userController){
         if(instance == null){
             instance = new Invoker(patientController, userController);

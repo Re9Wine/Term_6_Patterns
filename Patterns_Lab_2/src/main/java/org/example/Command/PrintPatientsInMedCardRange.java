@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда вывода поциентов, номер мед карты которых попадает в заданный диапазон
 public class PrintPatientsInMedCardRange implements ICommand {
     private final PatientController patientController;
 

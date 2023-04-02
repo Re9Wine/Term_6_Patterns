@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда вывода меню пациента
 public class PrintPatientMenuCommand implements ICommand {
     private final PatientController patientController;
 

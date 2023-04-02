@@ -21,9 +21,17 @@ public class Browser {
 
         while (isRun){
             try{
-                commands.get("printPatientMenu").execute();
+                //вызывай что-то одно - или меню пациента или главное меню
 
-                isRun = commands.get("selectPatientMenuItem").execute();
+                // меню пациента
+//                commands.get("printPatientMenu").execute();
+//
+//                isRun = commands.get("selectPatientMenuItem").execute();
+
+                // главное меню (регистрация/авторизация)
+                commands.get("printMainMenu").execute();
+
+                isRun = commands.get("selectUserMenuItem").execute();
 
             } catch (Exception e){
                 printErrorMessage(e.getMessage());

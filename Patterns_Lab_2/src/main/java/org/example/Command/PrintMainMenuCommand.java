@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда вывода главного меню
 public class PrintMainMenuCommand implements ICommand {
     private final UserController userController;
 

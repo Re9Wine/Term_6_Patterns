@@ -5,6 +5,7 @@ import org.example.Interface.ICommand;
 
 import java.io.IOException;
 
+// команда авторизации
 public class AuthorizationCommand implements ICommand {
     private final UserController userController;
 
