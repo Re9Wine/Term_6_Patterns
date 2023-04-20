@@ -1,4 +1,4 @@
-package org.example.State;
+package State;
 
 public class TVStateOn implements IState {
     @Override

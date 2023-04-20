@@ -1,6 +1,4 @@
-package org.example;
-
-import org.example.State.IState;
+import State.IState;
 
 public class TVContext implements IState {
     private IState state;

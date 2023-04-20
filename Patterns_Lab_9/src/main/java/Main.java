@@ -1,8 +1,6 @@
-package org.example;
-
-import org.example.State.IState;
-import org.example.State.TVStateOff;
-import org.example.State.TVStateOn;
+import State.IState;
+import State.TVStateOff;
+import State.TVStateOn;
 
 public class Main {
     public static void main(String[] args) {
